@@ -10,6 +10,7 @@ import CustomRenderer from './CustomRenderer/CustomRenderer';
 import MultipleSections from './MultipleSections/MultipleSections';
 import EventsPlayground from './EventsPlayground/EventsPlayground';
 import EventsLog from './EventsLog/EventsLog';
+import BuildCollection from './BuildCollection/BuildCollection';
 
 export default class Examples extends Component {
   constructor() {
@@ -19,7 +20,8 @@ export default class Examples extends Component {
       'Basic example',
       'Custom renderer',
       'Multiple sections',
-      'Events playground'
+      'Events playground',
+      'Build collection'
     ];
 
     this.eventsPlaceholder = {
@@ -95,6 +97,7 @@ export default class Examples extends Component {
       case 'Custom renderer': return <CustomRenderer />;
       case 'Multiple sections': return <MultipleSections />;
       case 'Events playground': return <EventsPlayground onEventAdded={this.onEventAdded.bind(this)} />;
+      case 'Build collection': return <BuildCollection />;
     }
   }
 
